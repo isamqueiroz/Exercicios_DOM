@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Camisetas</title>
+</head>
+<body>
+
+  <header>
+    <h1>Camisetas</h1>
+
+    <ul>Camiseta preta - R$50,00 
+      <button onclick="adicionarAoCarrinho(50)">Adicionar</button>
+    </ul>
+    <ul>Camiseta branca - R$40,00 
+      <button onclick="adicionarAoCarrinho(40)">Adicionar</button>
+    </ul>
+  </header>
+
+  <h2>Carrinho:</h2>
+
+  <script>
+    let total = 0;
+
+    function adicionarAoCarrinho(valor) {
+      total += valor;
+      document.getElementById('total').textContent = total.toFixed(2).replace('.', ',');
+    }
+  </script>
+
+</body>
+</html>
